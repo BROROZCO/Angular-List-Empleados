@@ -11,12 +11,14 @@ export class EmpleadoListComponent implements OnInit {
   listEmpleados: Empleado[] = [
     // Las propiedades van entre las llaves
     {legajo: 1, nombre: 'Juan', apellido: 'Perez', sexo: 'Masculino',salario: 25000},
-    {legajo: 2, nombre: 'Carlos', apellido: 'Orozco', sexo: 'Masculino',salario: 5000},
-    {legajo: 3, nombre: 'Juanita', apellido: 'Martinez', sexo: 'Femenino',salario: 18500},
+    {legajo: 2, nombre: 'Carlos', apellido: 'Membreño', sexo: 'Masculino',salario: 5000},
+    {legajo: 3, nombre: 'Juana', apellido: 'Martinez', sexo: 'Femenino',salario: 18500},
     {legajo: 4, nombre: 'Bryan', apellido: 'Orozco', sexo: 'Masculino',salario: 13000},
     {legajo: 5, nombre: 'Alexa', apellido: 'Yoconda', sexo: 'Femenino',salario: 9800}
   ]
   constructor() { }
+
+  radioBTNselec = 'Todos';
 
   ngOnInit(): void {
   }
