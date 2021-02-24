@@ -1,25 +1,7 @@
 <div class="container mt-3">
-    <div class="card">
-        <div class="card-body">
-            <!-- Radio Buttons -->
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" [(ngModel)]="radioBTNselec"
-                  type="radio" name="sexo" id="todos" value="Todos">
-                <label class="form-check-label" for="todos">Todos({{obtenerTotalEmpleados()}})</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" [(ngModel)]="radioBTNselec"
-                  type="radio" name="sexo" id="femenino" value="Femenino">
-                <label class="form-check-label" for="femenino">Femenino({{obtenerTotalFemeninos()}})</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" [(ngModel)]="radioBTNselec"
-                  type="radio" name="sexo" id="masculino" value="Masculino">
-                <label class="form-check-label" for="masculino">Masculino({{obtenerTotalMasculinos()}})</label>
-              </div>
-        </div>
-    </div>
-
+  <app-count-empleados [todos]="obtenerTotalEmpleados()"
+                       [masculino]="obtenerTotalMasculinos()"
+                       [femenino]="obtenerTotalFemeninos()"></app-count-empleados>
     <div class="card mt-3">
         <div class="card-body">
             <!-- Tabla -->
