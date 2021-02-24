@@ -31,12 +31,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Juan</td>
-                    <td>Perez</td>
-                    <td>Masculino</td>
-                    <td>25000</td>
+                  <tr *ngFor="let empleado of listEmpleados">
+                    <td>{{empleado.legajo}}</td>
+                    <td>{{empleado.nombre}}</td>
+                    <td>{{empleado.apellido}}</td>
+                    <td>{{empleado.sexo}}</td>
+                    <td>{{empleado.salario | currency}}</td>
                   </tr>
                 </tbody>
               </table>
