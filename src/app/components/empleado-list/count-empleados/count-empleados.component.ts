@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+//import * as EventEmitter from 'events';
 
 
 @Component({
@@ -8,10 +9,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CountEmpleadosComponent implements OnInit {
 
-  // Decorador @ Input para pasar datos a otros componentes
+  // Decorador @Input para pasar datos a otros componentes. del padre al hijo
+  // @output para enviar del hijo al padre
+  @Output() countRadioButtonChange = new EventEmitter<string>();
   @Input() todos: number;
   @Input() masculino: number;
   @Input() femenino: number;
+
+  
+
 
   radioBTNselec = 'Todos';
   constructor() { 
@@ -22,6 +28,10 @@ export class CountEmpleadosComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.todos);
+  }
+
+  radioChange(): void{
+    this.countRadioButtonChange.emit(this.radioBTNselec);
   }
 
 }

@@ -3,17 +3,17 @@
         <!-- Radio Buttons -->
         <div class="form-check form-check-inline">
             <input class="form-check-input" [(ngModel)]="radioBTNselec"
-              type="radio" name="sexo" id="todos" value="Todos">
+              type="radio" name="sexo" id="todos" value="Todos" (change)="radioChange()">
             <label class="form-check-label" for="todos">Todos({{todos}})</label>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" [(ngModel)]="radioBTNselec"
-              type="radio" name="sexo" id="femenino" value="Femenino">
+              type="radio" name="sexo" id="femenino" value="Femenino" (change)="radioChange()">
             <label class="form-check-label" for="femenino">Femenino({{femenino}})</label>
           </div>
           <div class="form-check form-check-inline">
             <input class="form-check-input" [(ngModel)]="radioBTNselec"
-              type="radio" name="sexo" id="masculino" value="Masculino">
+              type="radio" name="sexo" id="masculino" value="Masculino" (change)="radioChange()">
             <label class="form-check-label" for="masculino">Masculino({{masculino}})</label>
           </div>
     </div>
